@@ -1,0 +1,24 @@
+# ── Telegram Bot ──────────────────────────────────────────────────────
+python-telegram-bot>=22.0,<23.0
+
+# ── OpenRouter / OpenAI-compatible client ─────────────────────────────
+openai>=1.0,<3.0
+
+# ── PDF extraction (ProcessPoolExecutor target) ────────────────────────
+pypdf>=4.0,<6.0
+
+# ── HTTP client (persistent connection pool) ───────────────────────────
+httpx>=0.27,<1.0
+
+# ── Retry logic (tenacity with exponential jitter) ─────────────────────
+tenacity>=8.0,<10.0
+
+# ── uvloop — maximum async performance on Linux ────────────────────────
+uvloop>=0.19,<1.0
+
+# ── .env fallback loader ───────────────────────────────────────────────
+python-dotenv>=1.0,<2.0
+
+# ── Kept from original manifest (unused by bot.py but preserved) ──────
+flask
+requests
