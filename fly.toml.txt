@@ -1,0 +1,11 @@
+app = "medical-bot-5"
+primary_region = "ams"
+
+[build]
+
+[restart]
+  policy = "always"
+
+[env]
+  PORT = "8080"
+  
