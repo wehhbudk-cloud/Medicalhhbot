@@ -1,2 +1,5 @@
-app = "medical-bot-5"
+app = "medicalhhbot"
 primary_region = "ams"
+
+auto_stop_machines = false
+auto_start_machines = true
