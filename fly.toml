@@ -1,0 +1,21 @@
+app = "medical-bot-5"
+primary_region = "ams"
+
+[build]
+
+# ── Restart the container if the process exits (crash-loop protection) ─
+[restart]
+  policy = "always"
+
+# ── Polling mode: no HTTP service, no port binding, no health checks ──
+# The bot connects outbound to Telegram (getUpdates). It does NOT serve
+# HTTP, so Fly.io must not try to health-check a port.
+#
+# Keep the machine permanently running — a Telegram bot must stay online
+# 24/7. Disable auto-stop so Fly.io never suspends an idle machine.
+auto_stop_machines = false
+auto_start_machines = true
+
+# ── No [http_service] section ─────────────────────────────────────────
+# Without it, Fly.io treats this as a background worker and does not
+# perform HTTP/TCP health checks. The [restart] policy handles crashes.
